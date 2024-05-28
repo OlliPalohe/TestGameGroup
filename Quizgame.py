@@ -1,5 +1,5 @@
 def peli():
-    kysymykset = [("Kuinka monta jalkaa on kissalla?", ["neljä", "4"]), ("Missä kaupungissa sijaitsee Näsinneula?", ["Tampere", "Tampereella"]), ("Minä vuonna Suomi itsenäistyi?", ["1917"])]
+    kysymykset = [("Onko tuli kuumaa?": ["Kyllä": "Yes"], ("Onko vesi märkää?": ["Ei": "No"])("Kuinka monta jalkaa on kissalla?", ["neljä", "4"]), ("Missä kaupungissa sijaitsee Näsinneula?", ["Tampere", "Tampereella"]), ("Minä vuonna Suomi itsenäistyi?", ["1917"])]
     
     pelaaja = input("Anna nimi: ")
     score = 0
