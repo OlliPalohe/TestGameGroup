@@ -1,20 +1,23 @@
-score = 0
+def peli():
+    kysymykset = [("Onko tuli kuumaa?": ["Kyllä": "Yes"], ("Onko vesi märkää?": ["Ei": "No"])("Kuinka monta jalkaa on kissalla?", ["neljä", "4"]), ("Missä kaupungissa sijaitsee Näsinneula?", ["Tampere", "Tampereella"]), ("Minä vuonna Suomi itsenäistyi?", ["1917"])]
+    
+    pelaaja = input("Anna nimi: ")
+    score = 0
 
-kysymykset = {
-    "Onko tuli kuumaa?": {"Kyllä": "Yes"},
-    "Onko vesi märkää?": {"Ei": "No"} 
-}
+    while True:
+        print("Valitsemalla 1 katso pistetilanne. Valitsemalla 2 lopeta peli.")
+        for kysymys, vastaukset in kysymykset:
+            vastaus = input(kysymys + " ")
 
-while 
-    print(kysymys)
-    user_answer = input("Vastauksesi: ")
-
-    if user_answer.lower() in [vastaus.lower() for vastaus in vastaukset.keys()]:
-        print("Correct/Oikein!")
-        score += 1
-        kysymys_index += 1
-    else:
-        print("Väärin! Peli loppuu.")
-        break
-
-print(f"\nPisteet: {score}/{len(kysymykset)}") 
+            if vastaus.lower() in [v.lower() for v in vastaukset]:
+                print("Oikein!")
+                score += 1
+            elif vastaus == "1":
+                print(f"{pelaaja}n pistetilanne on {score}")
+                continue
+            elif vastaus == "2":
+                print(f"Pisteet yhteensä {score}. Kiitos pelistä, {pelaaja}!")
+                return
+            else:
+                print(f"Väärin. Oikea vastaus on {vastaukset[0]}.")
+peli()
